@@ -33,6 +33,7 @@ const AddressForm = () => {
       district,
       mNumber,
     };
+
     console.log(newAddress);
     try {
       await BuyerDataService.addAddress(newAddress);
@@ -41,6 +42,7 @@ const AddressForm = () => {
     } catch (err) {
       setMessage({ error: false, msg: err.message });
     }
+    
   };
 
   return (
